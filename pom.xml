@@ -8,10 +8,20 @@
     <artifactId>java-example</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>algorithm</module>
         <module>jieba-demo</module>
+        <module>stanford-nlp</module>
+        <module>ansj-nlp</module>
+        <module>rx-java</module>
     </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
