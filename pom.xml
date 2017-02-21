@@ -15,7 +15,7 @@
         <module>stanford-nlp</module>
         <module>ansj-nlp</module>
         <module>rx-java</module>
-        <module>crawler4j-with-jsoup</module>
+        <module>open-weather-api</module>
     </modules>
 
     <properties>
@@ -26,6 +26,13 @@
     </properties>
 
     <dependencies>
+        <!--https://projectlombok.org/mavenrepo/index.html-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.12</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
         <dependency>
             <groupId>joda-time</groupId>
