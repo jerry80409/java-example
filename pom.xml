@@ -16,12 +16,15 @@
         <module>ansj-nlp</module>
         <module>rx-java</module>
         <module>open-weather-api</module>
+        <module>threads-demo</module>
     </modules>
 
     <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
         <slf4j.version>1.7.21</slf4j.version>
     </properties>
 
