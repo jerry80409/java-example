@@ -17,6 +17,7 @@
         <module>rx-java</module>
         <module>open-weather-api</module>
         <module>threads-demo</module>
+        <module>design-patterns</module>
     </modules>
 
     <properties>
