@@ -6,7 +6,7 @@ package dependency.injection;
 public class Main {
 
     public static void main(String[] args) {
-        Application app = new Application(new EmailService());
+        Application app = new Application(new EmailServiceImpl());
         app.notification("nice to meet you", "someone");
     }
 }

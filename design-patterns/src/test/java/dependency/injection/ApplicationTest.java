@@ -5,6 +5,7 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -16,27 +17,31 @@ import org.mockito.MockitoAnnotations;
 public class ApplicationTest {
 
     @Mock
-    private EmailService mockEmailService;
+    private MessageService mockMessageService;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
     }
 
+    @After
+    public void teardown() {
+    }
+
     @Test
-    public void assertApplication() {
-        Application app = new Application(mockEmailService);
+    public void assertEmailServiceTriggered() {
+        Application app = new Application(mockMessageService);
 
         // trigger
         app.notification("test-message", "someone");
 
         // mock
         doNothing()
-                .when(mockEmailService)
-                .sendEmail(anyString(), anyString());
+                .when(mockMessageService)
+                .sendMessage(anyString(), anyString());
 
         // verify emailService will be call once
-        verify(mockEmailService, times(1));
+        verify(mockMessageService, times(1));
     }
 
 }

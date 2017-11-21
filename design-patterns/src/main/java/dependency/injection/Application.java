@@ -5,13 +5,14 @@ package dependency.injection;
  */
 public class Application {
 
-    private EmailService emailService;
+    private MessageService messageService;
 
-    public Application(EmailService emailService) {
-        this.emailService = emailService;
+    public Application(MessageService messageService) {
+        this.messageService = messageService;
     }
 
     public void notification(String message, String receiver) {
-        this.emailService.sendEmail(message, receiver);
+        this.messageService.sendMessage(message, receiver);
+
     }
 }
