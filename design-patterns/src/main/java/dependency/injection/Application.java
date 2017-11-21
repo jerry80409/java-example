@@ -5,7 +5,11 @@ package dependency.injection;
  */
 public class Application {
 
-    private EmailService emailService = new EmailService();
+    private EmailService emailService;
+
+    public Application(EmailService emailService) {
+        this.emailService = emailService;
+    }
 
     public void notification(String message, String receiver) {
         this.emailService.sendEmail(message, receiver);
