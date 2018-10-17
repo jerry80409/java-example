@@ -1,0 +1,30 @@
+# debug
+debug: false
+
+# database
+database:
+  host: localhost
+  name: jpa_example
+  username: root
+  password:
+
+# server
+server:
+  port: 8787
+
+# spring core
+spring:
+  profiles.active: dev
+  datasource:
+    username: ${database.username}
+    password: ${database.password}
+    url: jdbc:mysql://${database.host}:3306/${database.name}?characterEncoding=utf-8&useUnicode=true&useSSL=false&rewriteBatchedStatements=TRUE
+
+  jpa:
+    database: MYSQL
+    show-sql: true
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+    properties.hibernate.enable_lazy_load_no_trans: true
