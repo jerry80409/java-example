@@ -10,17 +10,16 @@ public class LambdaThread {
 
     public LambdaThread(int times) {
         this.times = times;
-
-        initThread();
+        this.task = initThread();
     }
 
     public Runnable getTask() {
         return this.task;
     }
 
-    private void initThread() {
+    private Runnable initThread() {
         // 這一段 lambda 相等於 implement Runnable
-        this.task = () -> {
+        return () -> {
             String name = Thread.currentThread().getName();
             System.out.println("Thread Name : " + name);
 

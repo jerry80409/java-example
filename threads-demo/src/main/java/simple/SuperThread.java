@@ -7,7 +7,7 @@ package simple;
  */
 public class SuperThread extends Thread {
 
-    private int times = 5;
+    private int times;
 
     public SuperThread(int times) {
         this.times = times;

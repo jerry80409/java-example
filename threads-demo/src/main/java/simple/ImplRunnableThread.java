@@ -5,8 +5,7 @@ package simple;
  */
 public class ImplRunnableThread implements Runnable {
 
-    private int times = 5;
-
+    private int times;
 
     public ImplRunnableThread(int times) {
         this.times = times;

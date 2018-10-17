@@ -6,6 +6,7 @@ package simple;
  * 建立 Thread 的方法有 2 種
  * 1. 繼承 thread
  * 2. 實作 Runnable Interface
+ * 3. Lambda Closure
  */
 public class SimpleThread {
 
